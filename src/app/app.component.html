@@ -1,3 +1,7 @@
-<h1>
-  {{title}}
-</h1>
+<h1>Angular 2 Game <br>rock-paper-scissors</h1>
+<player [playerColor]="'BLUE'" (shuffling-done)="onElementSelected($event)" #playerone></player>
+<player [playerClass]="'right'" [playerColor]="'RED'" (shuffling-done)="onElementSelected($event)" #playertwo></player>
+<div style="clear:both"></div>
+<br>
+<button (click)="doStartGame(playerone, playertwo)">Start game</button>
+<p>{{gameResult}}</p>
